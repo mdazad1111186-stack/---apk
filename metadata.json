@@ -1,0 +1,6 @@
+{
+  "name": "দক্ষিণ লতিবপুর যুব উন্নয়ন সংগঠন",
+  "description": "সংগঠনের জমা-খরচ হিসাব, সদস্য প্রোফাইল, লেনদেন এডিট-ডিলিট, গুগল শীট হিসাব ও ব্যাকআপ ব্যবস্থাপনা।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

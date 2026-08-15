@@ -1,0 +1,260 @@
+import { Member, DepositTransaction, ExpenseTransaction } from '../types';
+
+export const INITIAL_MEMBERS: Member[] = [
+  {
+    id: 1,
+    name: "মোঃ তারেক রহমান",
+    phone: "01711000001",
+    designation: "সভাপতি",
+    monthlyFee: 500,
+    joinDate: "2024-01-01",
+    address: "দক্ষিণ লতিবপুর, বাজার রোড",
+    bloodGroup: "A+",
+    isActive: true,
+    notes: "প্রতিষ্ঠাতা সদস্য ও সভাপতি",
+    createdAt: 1704067200000
+  },
+  {
+    id: 2,
+    name: "মোঃ সাজ্জাদ হোসেন",
+    phone: "01812000002",
+    designation: "সাধারণ সম্পাদক",
+    monthlyFee: 500,
+    joinDate: "2024-01-01",
+    address: "দক্ষিণ লতিবপুর, পূর্বপাড়া",
+    bloodGroup: "O+",
+    isActive: true,
+    notes: "সক্রিয় সংগঠক ও সাধারণ সম্পাদক",
+    createdAt: 1704067200000
+  },
+  {
+    id: 3,
+    name: "মোঃ আরিফুল ইসলাম",
+    phone: "01913000003",
+    designation: "কোষাধ্যক্ষ",
+    monthlyFee: 500,
+    joinDate: "2024-01-01",
+    address: "দক্ষিণ লতিবপুর, মধ্যপাড়া",
+    bloodGroup: "B+",
+    isActive: true,
+    notes: "সংগঠনের হিসাব ও তহবিল রক্ষক",
+    createdAt: 1704067200000
+  },
+  {
+    id: 4,
+    name: "হাসান মাহমুদ",
+    phone: "01614000004",
+    designation: "সাংগঠনিক সম্পাদক",
+    monthlyFee: 300,
+    joinDate: "2024-02-15",
+    address: "দক্ষিণ লতিবপুর, উত্তরপাড়া",
+    bloodGroup: "AB+",
+    isActive: true,
+    notes: "মাঠ পর্যায়ের সমন্বয়ক",
+    createdAt: 1707955200000
+  },
+  {
+    id: 5,
+    name: "মাহবুবুর রহমান",
+    phone: "01515000005",
+    designation: "প্রচার সম্পাদক",
+    monthlyFee: 300,
+    joinDate: "2024-03-01",
+    address: "দক্ষিণ লতিবপুর, পশ্চিমপাড়া",
+    bloodGroup: "O-",
+    isActive: true,
+    notes: "সংগঠনের প্রচার ও প্রকাশনা",
+    createdAt: 1709251200000
+  },
+  {
+    id: 6,
+    name: "কামরুল হাসান",
+    phone: "01716000006",
+    designation: "সমাজকল্যাণ সম্পাদক",
+    monthlyFee: 300,
+    joinDate: "2024-03-10",
+    address: "দক্ষিণ লতিবপুর, স্কুল রোড",
+    bloodGroup: "A-",
+    isActive: true,
+    notes: "ত্রাণ ও সেবামূলক কার্যক্রম পরিচালনা",
+    createdAt: 1710028800000
+  },
+  {
+    id: 7,
+    name: "রাকিবুল হাসান",
+    phone: "01817000007",
+    designation: "সদস্য",
+    monthlyFee: 200,
+    joinDate: "2024-04-01",
+    address: "দক্ষিণ লতিবপুর, দক্ষিণপাড়া",
+    bloodGroup: "B-",
+    isActive: true,
+    notes: "",
+    createdAt: 1711929600000
+  },
+  {
+    id: 8,
+    name: "মোঃ তানভীর আহমেদ",
+    phone: "01918000008",
+    designation: "সদস্য",
+    monthlyFee: 200,
+    joinDate: "2024-04-05",
+    address: "দক্ষিণ লতিবপুর, বাজার সংলগ্ন",
+    bloodGroup: "O+",
+    isActive: true,
+    notes: "",
+    createdAt: 1712275200000
+  },
+  {
+    id: 9,
+    name: "জাহিদুল ইসলাম",
+    phone: "01619000009",
+    designation: "সদস্য",
+    monthlyFee: 200,
+    joinDate: "2024-05-01",
+    address: "দক্ষিণ লতিবপুর, আকন্দ বাড়ি",
+    bloodGroup: "A+",
+    isActive: true,
+    notes: "",
+    createdAt: 1714521600000
+  },
+  {
+    id: 10,
+    name: "আলমগীর হোসেন",
+    phone: "01720000010",
+    designation: "উপদেষ্টা",
+    monthlyFee: 1000,
+    joinDate: "2024-01-01",
+    address: "দক্ষিণ লতিবপুর, মীর বাড়ি",
+    bloodGroup: "O+",
+    isActive: true,
+    notes: "প্রধান পৃষ্ঠপোষক ও সমাজসেবক",
+    createdAt: 1704067200000
+  }
+];
+
+export const INITIAL_DEPOSITS: DepositTransaction[] = [
+  {
+    id: 1,
+    memberId: 1,
+    memberName: "মোঃ তারেক রহমান",
+    amount: 500,
+    category: "মাসিক চাঁদা",
+    targetMonth: "2026-08",
+    date: "2026-08-01",
+    timestamp: 1785542400000,
+    paymentMethod: "নগদ",
+    receiptNo: "REC-2608-01",
+    note: "আগস্ট মাসের চাঁদা",
+    collectedBy: "মোঃ আরিফুল ইসলাম"
+  },
+  {
+    id: 2,
+    memberId: 2,
+    memberName: "মোঃ সাজ্জাদ হোসেন",
+    amount: 500,
+    category: "মাসিক চাঁদা",
+    targetMonth: "2026-08",
+    date: "2026-08-02",
+    timestamp: 1785628800000,
+    paymentMethod: "বিকাশ",
+    receiptNo: "REC-2608-02",
+    note: "বিকাশ ট্রানজেকশন ID: 9LK8M2",
+    collectedBy: "মোঃ আরিফুল ইসলাম"
+  },
+  {
+    id: 3,
+    memberId: 3,
+    memberName: "মোঃ আরিফুল ইসলাম",
+    amount: 500,
+    category: "মাসিক চাঁদা",
+    targetMonth: "2026-08",
+    date: "2026-08-03",
+    timestamp: 1785715200000,
+    paymentMethod: "নগদ",
+    receiptNo: "REC-2608-03",
+    note: "আগস্ট মাসের চাঁদা",
+    collectedBy: "মোঃ আরিফুল ইসলাম"
+  },
+  {
+    id: 4,
+    memberId: 10,
+    memberName: "আলমগীর হোসেন",
+    amount: 5000,
+    category: "বিশেষ অনুদান",
+    targetMonth: "2026-08",
+    date: "2026-08-05",
+    timestamp: 1785888000000,
+    paymentMethod: "ব্যাংক",
+    receiptNo: "REC-2608-04",
+    note: "গ্রামের অসহায়দের চিকিৎসা ফান্ডে বিশেষ অনুদান",
+    collectedBy: "মোঃ তারেক রহমান"
+  },
+  {
+    id: 5,
+    memberId: 4,
+    memberName: "হাসান মাহমুদ",
+    amount: 300,
+    category: "মাসিক চাঁদা",
+    targetMonth: "2026-08",
+    date: "2026-08-06",
+    timestamp: 1785974400000,
+    paymentMethod: "নগদ",
+    receiptNo: "REC-2608-05",
+    note: "",
+    collectedBy: "মোঃ আরিফুল ইসলাম"
+  },
+  {
+    id: 6,
+    memberId: 6,
+    memberName: "কামরুল হাসান",
+    amount: 300,
+    category: "মাসিক চাঁদা",
+    targetMonth: "2026-08",
+    date: "2026-08-07",
+    timestamp: 1786060800000,
+    paymentMethod: "নগদ",
+    receiptNo: "REC-2608-06",
+    note: "",
+    collectedBy: "মোঃ আরিফুল ইসলাম"
+  }
+];
+
+export const INITIAL_EXPENSES: ExpenseTransaction[] = [
+  {
+    id: 1,
+    title: "অসহায় রোগীর ঔষধ ক্রয় সহায়তা",
+    amount: 2500,
+    category: "চিকিৎসা সহায়তা",
+    targetMonth: "2026-08",
+    date: "2026-08-08",
+    timestamp: 1786147200000,
+    spentBy: "কামরুল হাসান",
+    voucherNo: "EXP-2608-01",
+    note: "লতিবপুর মধ্যপাড়ার অসুস্থ দিনমজুরের প্রেসক্রিপশনের ঔষধ কিনে দেওয়া হয়েছে"
+  },
+  {
+    id: 2,
+    title: "সংগঠনের মাসিক মিটিং আপ্যায়ন ও স্টেশনারি",
+    amount: 650,
+    category: "অফিস ও স্টেশনারি",
+    targetMonth: "2026-08",
+    date: "2026-08-04",
+    timestamp: 1785801600000,
+    spentBy: "মোঃ সাজ্জাদ হোসেন",
+    voucherNo: "EXP-2608-02",
+    note: "রেজিস্টার খাতা, কলম ও চা-বিস্কুট খরচ"
+  },
+  {
+    id: 3,
+    title: "মসজিদ সংলগ্ন রাস্তা সংস্কার স্বেচ্ছাশ্রমের সরঞ্জাম",
+    amount: 1200,
+    category: "সমাজকল্যাণ",
+    targetMonth: "2026-08",
+    date: "2026-08-10",
+    timestamp: 1786320000000,
+    spentBy: "হাসান মাহমুদ",
+    voucherNo: "EXP-2608-03",
+    note: "কোদাল, টুকরি ও বালু পরিবহন খরচ"
+  }
+];
